@@ -1,5 +1,5 @@
 # Add nano as default editor
-export EDITOR=vim
+export EDITOR=leafpad
 export TERMINAL=lxterminal
 export BROWSER=firefox
 # Gtk themes 
