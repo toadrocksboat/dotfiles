@@ -6,11 +6,18 @@ export BROWSER=firefox
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # bash prompt
-export PS1="\\$ "
+#export PS1="\\$ "
+function nonzero_return() {
+    RETVAL=$?
+        [ $RETVAL -ne 0 ] && echo "$RETVAL"
+    }
+
+export PS1="\A \u@\h:\W \`nonzero_return\` "
 
 # aliases
 alias ls='ls --color=auto'
 alias la='ls -la --color=auto'
+alias shutd='sudo shutdown now'
 
 alias yolo='sudo pacman -Syyu'
 
