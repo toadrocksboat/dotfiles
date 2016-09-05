@@ -6,13 +6,10 @@ export BROWSER=firefox
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # bash prompt
+# plaint simple dollar sign
 #export PS1="\\$ "
-function nonzero_return() {
-    RETVAL=$?
-        [ $RETVAL -ne 0 ] && echo "$RETVAL"
-    }
-
-export PS1="\A \u@\h:\W \`nonzero_return\` "
+# plain username dollar sign
+export PS1="\u\\$  "
 
 # aliases
 alias ls='ls --color=auto'
